@@ -1,0 +1,300 @@
+/*variables*/
+/*fuentes*/
+/*colores*/
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, ::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+.centrado {
+  text-align: center;
+}
+
+.contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  padding: .5rem 0;
+}
+
+.logo p {
+  text-shadow: 2px 2px .2rem #666262;
+  font-weight: 900;
+  font-size: 3rem;
+  margin: 0;
+  color: #741d51;
+}
+
+.logo p span {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #969191;
+}
+
+.carrito-compras {
+  position: relative;
+}
+
+.carrito-compras:hover .contenido {
+  display: block;
+  position: absolute;
+  right: 0;
+  background-color: #e9e9e9;
+  padding: 1rem;
+  max-width: 400px;
+}
+
+.carrito-compras:hover .contenido img {
+  max-width: 150px;
+}
+
+.carrito-compras:hover .contenido .boton {
+  width: 100%;
+  padding: .5rem  1rem;
+  margin-top: 1rem;
+  border: none;
+  background-color: #33c3f0;
+}
+
+.carrito-compras:hover .contenido .boton a {
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+}
+
+.oculto {
+  display: none;
+}
+
+.hero {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("../img/hero.jpg");
+  min-height: 24rem;
+  background-size: cover;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.hero .contenido-hero {
+  flex: 1;
+}
+
+.hero .contenido-hero h2 {
+  font-weight: 400;
+  font-size: 2.4rem;
+}
+
+.hero .contenido-hero p {
+  font-size: 1.2rem;
+}
+
+.hero .contenido-hero form {
+  position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero .contenido-hero form {
+    width: 50%;
+  }
+}
+
+.hero .contenido-hero form input[type="submit"] {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("../img/lupa.png");
+  position: absolute;
+  right: 0;
+  top: 0%;
+  width: 3rem;
+  height: 3rem;
+  display: block;
+  text-indent: -9999px;
+  border: none;
+  cursor: pointer;
+}
+
+.hero .contenido-hero form input[type="text"] {
+  width: 100%;
+  height: 3rem;
+  border: none;
+}
+
+.barra {
+  min-height: 6rem;
+  padding: 1rem;
+  color: #ffffff;
+  background-image: linear-gradient(to right, #741d51 0%, #e44e52 100%);
+  display: flex;
+  align-items: center;
+}
+
+.barra .iconos {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+@media only screen and (min-width: 1040px) {
+  .barra .iconos {
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+.barra .iconos .icono {
+  flex: 1;
+  background-position: 5% center !important;
+  background-size: 2.4rem;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .barra .iconos .icono {
+    background-position: 20% center !important;
+  }
+}
+
+@media only screen and (min-width: 1040px) {
+  .barra .iconos .icono {
+    background-position: left center !important;
+  }
+}
+
+.barra .iconos .icono.icono1 {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("../img/icono1.png");
+}
+
+.barra .iconos .icono.icono2 {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("../img/icono2.png");
+}
+
+.barra .iconos .icono.icono3 {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("../img/icono3.png");
+}
+
+.cursos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.cursos .curso {
+  flex: 0 1 calc(50% - 1rem);
+  border: 1px solid #e9e9e9;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .cursos .curso {
+    flex: 0 1 calc(33% - 1rem);
+  }
+}
+
+@media only screen and (min-width: 1040px) {
+  .cursos .curso {
+    flex: 0 1 calc(25% - 1rem);
+  }
+}
+
+.cursos .curso .imagen-curso {
+  width: 100%;
+}
+
+.curso {
+  list-style: none;
+}
+
+.info-curso {
+  padding: 1rem;
+}
+
+.info-curso h4 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.info-curso .precio {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-curso .precio .regular {
+  text-decoration: line-through;
+  color: #D00;
+}
+
+.info-curso .precio .oferta {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0b0;
+}
+
+.boton {
+  display: block;
+  background-color: #741d51;
+  padding: .5rem  1rem;
+  text-decoration: none;
+  margin-top: 1rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+.footer {
+  border-top: 1px solid #e9e9e9;
+  margin-top: 1rem;
+  padding-top: 2rem;
+}
+
+.footer .contenedor-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 480px) {
+  .footer .contenedor-footer {
+    flex-direction: row;
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+@media only screen and (min-width: 768px) {
+  .menu {
+    flex: 0 1 calc(30% - 1rem);
+  }
+}
+
+.menu a {
+  color: #000;
+  text-decoration: none;
+  margin-bottom: .5rem;
+}
