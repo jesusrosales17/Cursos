@@ -19,26 +19,20 @@
 		</div>
 		<div class="carrito-compras">
 			<img src="img/cart.png" class="img-carrito">
-			<div class="contenido oculto">
-				<table id="lista-carrito" class="">
+			<div class="contenido oculto" id="carrito">
+				<table id="lista-carrito">
 					<thead>
 						<tr>
 							<th>Imagen</th>
 							<th>Nombre</th>
 							<th>Precio</th>
+							<th>Cantidad</th>
+							<th></th>
 						</tr>
 					</thead>
-					<tbody>
-						<tr>
-							<td>
-								<img src="img/curso1.jpg">
-							</td>
-							<td>CSS Grid y Flexbox Construye + 10 Proyectos</td>
-							<td>$15</td>
-						</tr>
-					</tbody>
+					<tbody class="tbody"></tbody>
 				</table>
-				<button  class="boton"><a href="#">Vaciar Carrito</a></button>
+				<button  class="boton" id="vaciar-carrito"><a href="#">Vaciar Carrito</a></button>
 			</div>
 			<!--#carrito-->
 		</div>
@@ -77,9 +71,10 @@
 			</marquee>
 		</div>
 
-	<h1 class="encabezado centrado">Cursos En Línea</h1>
+	<main class="contenedor" id="lista-cursos">
+		<h1 class="encabezado centrado">Cursos En Línea</h1>
 
-	<ul class="cursos contenedor">
+	<ul class="cursos ">
 		<li class="curso">
 			<div >
 				<img class="imagen-curso" src="img/curso1.jpg">
@@ -91,7 +86,7 @@
 						<p class="regular">$200</p>
 						<p class="oferta">$15</p>
 					</div>
-					<a href="#" class="boton" data-id="1">Agregar Al Carrito</a>
+					<a href="#" class="boton agregar-carrito" data-id="1">Agregar Al Carrito</a>
 				</div>
 			</div>
 		</li>
@@ -106,7 +101,8 @@
 						<div class="precio">
 						<p class="regular">$200</p>
 						<p class="oferta">$15</p>
-					</div>						<a href="#" class="boton" data-id="2">Agregar Al Carrito</a>
+					</div>						
+					<a href="#" class="boton agregar-carrito" data-id="2">Agregar Al Carrito</a>
 				</div>
 			</div>
 		</li>
@@ -123,7 +119,7 @@
 						<p class="regular">$200</p>
 						<p class="oferta">$15</p>
 					</div>
-					<a href="#" class="boton" data-id="3">Agregar Al Carrito</a>
+					<a href="#" class="boton agregar-carrito" data-id="3">Agregar Al Carrito</a>
 				</div>
 			</div>
 			</li>
@@ -139,7 +135,7 @@
 							<p class="regular">$200</p>
 							<p class="oferta">$15</p>
 						</div>
-						<a href="#" class="boton" data-id="4">Agregar Al Carrito</a>
+						<a href="#" class="boton agregar-carrito" data-id="4">Agregar Al Carrito</a>
 					</div>
 				</div>
 			</li>
@@ -155,7 +151,7 @@
 						<p class="regular">$200</p>
 						<p class="oferta">$15</p>
 					</div>
-					<a href="#" class="boton" data-id="5">Agregar Al Carrito</a>
+					<a href="#" class="boton agregar-carrito" data-id="5">Agregar Al Carrito</a>
 				</div>
 			</div>
 		</li>
@@ -171,7 +167,7 @@
 						<p class="regular">$200</p>
 						<p class="oferta">$15</p>
 					</div>
-					<a href="#" class="boton" data-id="6">Agregar Al Carrito</a>
+					<a href="#" class="boton agregar-carrito" data-id="6">Agregar Al Carrito</a>
 				</div>
 			</div>
 		</li>
@@ -187,7 +183,7 @@
 						<p class="regular">$200</p>
 						<p class="oferta">$15</p>
 					</div>
-					<a href="#" class="boton" data-id="7">Agregar Al Carrito</a>
+					<a href="#" class="boton agregar-carrito" data-id="7">Agregar Al Carrito</a>
 				</div>
 			</div>
 		</li>
@@ -203,7 +199,7 @@
 						<p class="regular">$200</p>
 						<p class="oferta">$15</p>
 					</div>
-					<a href="#" class="boton" data-id="8">Agregar Al Carrito</a>
+					<a href="#" class="boton agregar-carrito" data-id="8">Agregar Al Carrito</a>
 				</div>
 			</div>
 		</li>
@@ -219,7 +215,7 @@
 						<p class="regular">$200</p>
 						<p class="oferta">$15</p>
 					</div>
-					<a href="#" class="boton" data-id="9">Agregar Al Carrito</a>
+					<a href="#" class="boton agregar-carrito" data-id="9">Agregar Al Carrito</a>
 				</div>
 			</div>
 		</li>
@@ -235,7 +231,7 @@
 						<p class="regular">$200</p>
 						<p class="oferta">$15</p>
 					</div>
-					<a href="#" class="boton" data-id="10">Agregar Al Carrito</a>
+					<a href="#" class="boton agregar-carrito" data-id="10">Agregar Al Carrito</a>
 				</div>
 			</div>
 		</li>
@@ -251,7 +247,7 @@
 						<p class="regular">$200</p>
 						<p class="oferta">$15</p>
 					</div>
-					<a href="#" class="boton" data-id="11">Agregar Al Carrito</a>
+					<a href="#" class="boton agregar-carrito" data-id="11">Agregar Al Carrito</a>
 				</div>
 			</div>
 		</li>
@@ -267,13 +263,14 @@
 						<p class="regular">$200</p>
 						<p class="oferta">$15</p>
 					</div>
-					<a href="#" class="boton" data-id="12">Agregar Al Carrito</a>
+					<a href="#" class="boton agregar-carrito" data-id="12">Agregar Al Carrito</a>
 				</div>
 			</div>
 		</li>
 		<!--.curso-->
 	</ul>
 	<!--.cursos-->
+	</main>
 
 	<footer id="footer" class="footer">
 		<div class="contenedor">
@@ -295,7 +292,7 @@
 		</div>
 		<!--.contenedor-->
 	</footer>
-
+	<script src="app.js"></script>
 </body>
 
 </html>
